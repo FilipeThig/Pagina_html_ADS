@@ -7,28 +7,46 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>MPB!</h1>
-  <p>Este é o meu documento HTML sobre MPB.</p>
+  <header class="hero">
+    <div class="hero__content">
+      <p class="eyebrow">Música Popular Brasileira</p>
+      <h1>MPB!</h1>
+    </div>
+  </header>
 
-  <!--comentarios-->
-  <h1>O que é?</h1>
-  <p>MPB, sigla derivada da expressão Música Popular Brasileira, é um gênero musical surgido no Brasil em meados da década de 1960. A MPB surgiu a partir de 1966 na cidade do Rio de Janeiro com a segunda geração da bossa nova, mas com uma forte influência do folclore brasileiro que já vinha desde 1932</p>
-  <p>Na prática, a sigla MPB anunciou uma fusão de dois movimentos musicais até então divergentes, a bossa nova e o engajamento folclórico dos Centros Populares de Cultura da União Nacional dos Estudantes. Os primeiros defendendo a sofisticação musical e os segundos, a fidelidade à música de raiz brasileira. Seus propósitos se misturaram e, com o golpe de 1964, os dois movimentos se tornaram uma frente ampla cultural contra o regime militar, adotando a sigla MPB na sua bandeira de luta.</p>
+  <main class="container">
+    <section class="intro">
+      <p>Este é o meu documento HTML sobre MPB.</p>
+    </section>
 
-  <h2>Cantores referência:</h2>
-  <ol>
-    <li>Chico Buarque
-      <img src="chico.png" alt="Chico Buarque">
-    </li>
-    <li>Caetano Veloso
-      <img src="caetano.png" alt="Caetano Veloso">
-    </li>
-    <li>Gilberto Gil
-      <img src="gi.png" alt="Gilberto Gil">
-    </li>
-  </ol>
+    <section class="conteudo">
+      <h2>O que é?</h2>
+      <p>MPB, sigla derivada da expressão Música Popular Brasileira, é um gênero musical surgido no Brasil em meados da década de 1960. A MPB surgiu a partir de 1966 na cidade do Rio de Janeiro com a mistura de influências de diferentes tradições musicais e da realidade cultural brasileira.</p>
+      <p>Na prática, a sigla MPB anunciou uma fusão de dois movimentos musicais até então divergentes, a bossa nova e o engajamento folclórico dos Centros Populares de Cultura da União Nacional dos Estudantes.</p>
+    </section>
 
-  <a href="https://pt.wikipedia.org/wiki/MPB" target="_blank">Visite a página, sobre MPB, na Wikipédia</a>
+    <section class="cantores">
+      <h2>Cantores referência:</h2>
+      <ol class="lista-cantores">
+        <li class="cantor-card">
+          <span class="nome-cantor">Chico Buarque</span>
+          <img src="chico.png" alt="Chico Buarque">
+        </li>
+        <li class="cantor-card">
+          <span class="nome-cantor">Caetano Veloso</span>
+          <img src="caetano.png" alt="Caetano Veloso">
+        </li>
+        <li class="cantor-card">
+          <span class="nome-cantor">Gilberto Gil</span>
+          <img src="gi.png" alt="Gilberto Gil">
+        </li>
+      </ol>
+    </section>
+
+    <div class="link-box">
+      <a href="https://pt.wikipedia.org/wiki/MPB" target="_blank" rel="noreferrer">Visite a página, sobre MPB, na Wikipédia</a>
+    </div>
+  </main>
 
   <footer>
     <p>Feito por: Filipe Thiago</p>
