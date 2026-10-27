@@ -1,0 +1,148 @@
+/* ===== Fontes ===== */
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap");
+
+/* ===== Cores e tipografia ===== */
+:root {
+  --tinta: #14213d;       /* azul-tinta do texto */
+  --fundo: #f6f8f2;
+  --verde: #0b7a4b;
+  --amarelo: #f4c20d;
+  --azul: #1b3a8c;
+  --display: "Archivo Black", "Arial Black", Impact, sans-serif;
+  --texto: "Source Serif 4", Georgia, "Times New Roman", serif;
+}
+
+/* ===== Base ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0 1.25rem 3rem;
+  background: var(--fundo);
+  color: var(--tinta);
+  font-family: var(--texto);
+  font-size: 1.125rem;
+  line-height: 1.7;
+}
+
+body > * {
+  max-width: 42rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ===== Títulos ===== */
+h1,
+h2 {
+  font-family: var(--display);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+}
+
+/* Título principal: MPB! */
+h1:first-of-type {
+  max-width: none;
+  margin: 0 -1.25rem 1.5rem;
+  padding: 3.5rem 1.25rem 2rem;
+  background: var(--verde);
+  color: var(--amarelo);
+  font-size: clamp(4rem, 18vw, 9rem);
+  text-align: center;
+  border-bottom: 0.6rem solid var(--azul);
+}
+
+h1 {
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+  font-size: clamp(1.75rem, 5vw, 2.5rem);
+  color: var(--azul);
+}
+
+h2 {
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: var(--verde);
+}
+
+/* ===== Texto ===== */
+p {
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+}
+
+/* ===== Lista de cantores ===== */
+ol {
+  padding-left: 1.75rem;
+}
+
+ol li {
+  margin-top: 1.5rem;
+  padding-left: 0.25rem;
+  font-family: var(--display);
+  font-size: 1.4rem;
+  line-height: 1.2;
+}
+
+ol li::marker {
+  color: var(--verde);
+}
+
+/* ===== Imagens ===== */
+img {
+  display: block;
+  width: 100%;
+  max-width: 11rem;
+  height: auto;
+  margin: 0.75rem 0 0 -1.75rem;
+  border: 4px solid var(--amarelo);
+  border-radius: 0.5rem;
+  box-shadow: 6px 6px 0 var(--azul);
+}
+
+/* ===== Links ===== */
+a {
+  color: var(--azul);
+  font-weight: 600;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.2em;
+}
+
+a:hover {
+  color: var(--verde);
+}
+
+a:focus-visible {
+  outline: 3px solid var(--amarelo);
+  outline-offset: 3px;
+}
+
+/* Link vazio (sem texto) não ocupa espaço */
+a:empty {
+  display: none;
+}
+
+/* ===== Rodapé ===== */
+footer {
+  max-width: none;
+  margin: 3rem -1.25rem -3rem;
+  padding: 1.25rem;
+  background: var(--tinta);
+  color: var(--fundo);
+  text-align: center;
+  font-size: 1rem;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* ===== Telas maiores ===== */
+@media (min-width: 40rem) {
+  body {
+    font-size: 1.2rem;
+  }
+}
