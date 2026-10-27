@@ -1,9 +1,7 @@
-/* ===== Fontes ===== */
 @import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap");
 
-/* ===== Cores e tipografia ===== */
 :root {
-  --tinta: #14213d;       /* azul-tinta do texto */
+  --tinta: #14213d;
   --fundo: #f6f8f2;
   --verde: #0b7a4b;
   --amarelo: #f4c20d;
@@ -12,137 +10,146 @@
   --texto: "Source Serif 4", Georgia, "Times New Roman", serif;
 }
 
-/* ===== Base ===== */
 * {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  padding: 0 1.25rem 3rem;
   background: var(--fundo);
   color: var(--tinta);
   font-family: var(--texto);
-  font-size: 1.125rem;
   line-height: 1.7;
 }
 
-body > * {
-  max-width: 42rem;
-  margin-left: auto;
-  margin-right: auto;
+.hero {
+  background: linear-gradient(135deg, var(--verde), #0d5e3d);
+  border-bottom: 0.5rem solid var(--azul);
+  padding: 3rem 1.25rem 2.2rem;
 }
 
-/* ===== Títulos ===== */
-h1,
-h2 {
-  font-family: var(--display);
-  font-weight: 400;
-  line-height: 1.05;
-  letter-spacing: -0.01em;
-}
-
-/* Título principal: MPB! */
-h1:first-of-type {
-  max-width: none;
-  margin: 0 -1.25rem 1.5rem;
-  padding: 3.5rem 1.25rem 2rem;
-  background: var(--verde);
-  color: var(--amarelo);
-  font-size: clamp(4rem, 18vw, 9rem);
+.hero__content {
+  max-width: 1100px;
+  margin: 0 auto;
   text-align: center;
-  border-bottom: 0.6rem solid var(--azul);
+}
+
+.eyebrow {
+  margin: 0 0 0.8rem;
+  color: var(--amarelo);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.8rem;
 }
 
 h1 {
-  margin-top: 2.5rem;
-  margin-bottom: 0.75rem;
-  font-size: clamp(1.75rem, 5vw, 2.5rem);
-  color: var(--azul);
+  margin: 0;
+  font-family: var(--display);
+  font-size: clamp(3.2rem, 9vw, 7rem);
+  color: var(--amarelo);
+  line-height: 1;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 3rem;
 }
 
 h2 {
-  margin-top: 2.5rem;
-  margin-bottom: 1rem;
-  font-size: 1.5rem;
-  color: var(--verde);
-}
-
-/* ===== Texto ===== */
-p {
-  margin-top: 0;
-  margin-bottom: 1.25rem;
-}
-
-/* ===== Lista de cantores ===== */
-ol {
-  padding-left: 1.75rem;
-}
-
-ol li {
-  margin-top: 1.5rem;
-  padding-left: 0.25rem;
   font-family: var(--display);
-  font-size: 1.4rem;
-  line-height: 1.2;
+  color: var(--azul);
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  margin: 2rem 0 1rem;
 }
 
-ol li::marker {
+p {
+  margin: 0 0 1.2rem;
+  font-size: 1.08rem;
+}
+
+.lista-cantores {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.cantor-card {
+  background: #fff;
+  border: 3px solid var(--amarelo);
+  border-radius: 18px;
+  padding: 1rem;
+  box-shadow: 0 8px 20px rgba(20, 33, 61, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.nome-cantor {
+  display: block;
+  font-family: var(--display);
   color: var(--verde);
+  margin-bottom: 0.9rem;
+  font-size: 1.1rem;
 }
 
-/* ===== Imagens ===== */
 img {
   display: block;
   width: 100%;
-  max-width: 11rem;
-  height: auto;
-  margin: 0.75rem 0 0 -1.75rem;
-  border: 4px solid var(--amarelo);
-  border-radius: 0.5rem;
-  box-shadow: 6px 6px 0 var(--azul);
+  max-width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 3px solid var(--azul);
+  background: #eaeaea;
 }
 
-/* ===== Links ===== */
+.link-box {
+  margin-top: 2rem;
+  text-align: center;
+}
+
 a {
   color: var(--azul);
-  font-weight: 600;
-  text-decoration-thickness: 2px;
+  font-weight: 700;
+  text-decoration: underline;
   text-underline-offset: 0.2em;
+  text-decoration-thickness: 2px;
 }
 
 a:hover {
   color: var(--verde);
 }
 
-a:focus-visible {
-  outline: 3px solid var(--amarelo);
-  outline-offset: 3px;
-}
-
-/* Link vazio (sem texto) não ocupa espaço */
-a:empty {
-  display: none;
-}
-
-/* ===== Rodapé ===== */
 footer {
-  max-width: none;
-  margin: 3rem -1.25rem -3rem;
-  padding: 1.25rem;
   background: var(--tinta);
-  color: var(--fundo);
+  color: #fff;
   text-align: center;
-  font-size: 1rem;
+  padding: 1.2rem 1rem;
 }
 
 footer p {
   margin: 0;
+  font-size: 1rem;
 }
 
-/* ===== Telas maiores ===== */
-@media (min-width: 40rem) {
-  body {
-    font-size: 1.2rem;
+@media (max-width: 600px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .cantor-card {
+    padding: 0.8rem;
+  }
+
+  img {
+    max-width: 150px;
+    height: 150px;
   }
 }
